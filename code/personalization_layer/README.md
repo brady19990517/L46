@@ -1,0 +1,3 @@
+## Implementation
+
+The demo FL setup with personalization layer is implemented with `flower` library. Based on the default FL update procedures, the Neural network `Net` that was trained and aggregated was decomposed into two parts - `BaseNet` and `PersonalNet` - and they  are stringed together with `FullModel`. The main difference from default setup is that instead of sending the full model to the server after each round of indivdiual training with the entire network, we only send the `basenet` for FedAvg (or possibly some other strategies) updates, while retaining the weights of `personalnet` to the client itself. This effectively achieves personalization for non-iid data provided the personalization layers can capture the heterogeneity among different clients.     
