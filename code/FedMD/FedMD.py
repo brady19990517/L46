@@ -3,6 +3,8 @@ from tensorflow.keras.models import clone_model, load_model
 from tensorflow.keras.callbacks import EarlyStopping
 import tensorflow as tf
 
+import flwr as fl
+
 from data_utils import generate_alignment_data
 from Neural_Networks import remove_last_layer
 

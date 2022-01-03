@@ -3,7 +3,7 @@ from tensorflow.keras.layers import Input, Dense, add, concatenate, Conv2D,Dropo
 BatchNormalization, Flatten, MaxPooling2D, AveragePooling2D, Activation, Dropout, Reshape
 from tensorflow.keras.callbacks import EarlyStopping
 import tensorflow as tf
-
+import flwr as fl
 
 def cnn_3layer_fc_model(n_classes,n1 = 128, n2=192, n3=256, dropout_rate = 0.2,input_shape = (28,28)):
     model_A, x = None, None
